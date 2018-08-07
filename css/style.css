@@ -18,6 +18,11 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 input, select, textarea, button {
   outline: none;
   border: 0; }
@@ -40,11 +45,11 @@ body {
 .wrap {
   min-height: 100%;
   height: auto;
-  margin: 0 auto -60px;
   padding: 0 0 60px; }
   .wrap > .container {
     padding: 70px 15px 20px;
-    width: 750px;
+    max-width: 750px;
+    width: 100%;
     margin: 0 auto; }
 
 .flex {
@@ -100,7 +105,7 @@ body {
   .listing .item .details {
     width: 25%;
     flex-flow: column;
-    padding: 25px;
+    padding: 15px;
     background: #a0cc11;
     color: #ffffff;
     justify-content: center; }
@@ -108,5 +113,27 @@ body {
       margin-bottom: 15px; }
     .listing .item .details .detail .city {
       text-transform: capitalize; }
+
+@media only screen and (max-width: 414px) {
+  .listing .item {
+    height: auto;
+    flex-wrap: wrap;
+    font-size: 12px; }
+    .listing .item .thumb_logo {
+      width: 24%;
+      margin: auto; }
+    .listing .item .description {
+      width: 76%;
+      margin-top: 5px;
+      padding: 15px;
+      line-height: 1.2; }
+      .listing .item .description .body {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+    .listing .item .details {
+      width: 100%; }
+      .listing .item .details .detail:nth-child(1) {
+        margin-bottom: 7px; } }
 
 /*# sourceMappingURL=style.css.map */
